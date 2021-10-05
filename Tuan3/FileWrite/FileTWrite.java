@@ -19,7 +19,7 @@ public class FileTWrite extends Thread{
         System.out.println(Thread.currentThread().getName()+" running...");
         for(int i=0; i<10; i++){
             try {
-                this.fos.write((int) rand);
+                this.dos.writeInt((int) Math.random());
             } catch (IOException e) {
                 e.printStackTrace();
             }
