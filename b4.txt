@@ -1,0 +1,18 @@
+Bài 4: Viết chương trình mô phỏng bài toán "Người sản xuất - Người tiêu dùng", trong đó Người sản xuất 
+sẽ sản xuất ra một số lượng ngẫu nhiên n sản phẩm nào đó rồi yêu cầu nhập kho. Người tiêu dùng sẽ yêu 
+cầu xuất kho một số lượng ngẫu nhiên m sản phẩm nào đó từ kho. Yêu cầu nhập kho chỉ được chấp nhận 
+nếu số lượng hàng hóa đưa vào không vượt quá sức chứa của kho, nếu không, phải chờ cho đến khi có đủ
+chổ trống trong kho. Yêu cầu xuất kho chỉ được chấp nhận khi còn đủ hàng trong kho nếu không cũng phải 
+chờ
+Gợi ý : Thiết kế các lớp sau:
+- Lớp Kho: Có thuộc tính là sức chứa, phương thức khởi tạo gán giá trị cho sức chứa, các phương 
+thức xem số lượng hàng tồn, phương thức nhập kho, phương thức xuất kho. In thông báo mỗi khi 
+nhập kho hay xuất kho thành công
+- Lớp Người Sản Xuất là một Thread: Có thuộc tính là kho để nhập hàng. Phương thức khởi tạo gán 
+giá trị cho kho nhập hàng. Phương thức sản xuất lặp lại công việc là tạo ra n sản phẩm ngẫu nhiên 
+và chờ để nhập vào kho. 
+- Lớp Người Tiêu Dùng là một Thread: Có thuộc tính là kho để xuất hàng. Phương thức khởi tạo gán 
+giá trị cho kho để xuất hàng. Phương thức tiêu dùng lặp lại công việc là chờ để yêu cầu xuất m sản 
+phẩm từ kho.
+- Lớp Demo tạo ra một kho và 2 người sản xuất, 2 người tiêu dùng thực hiện việc nhập xuất trên 
+cùng một kho
