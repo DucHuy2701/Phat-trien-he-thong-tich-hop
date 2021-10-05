@@ -1,4 +1,4 @@
-package Tuan3.Synchronization.txt;
+package Tuan3.Synchronization;
 
 import java.io.DataInputStream;
 import java.io.FileInputStream;
@@ -8,8 +8,7 @@ import java.io.IOException;
 import java.util.Random;
 
 public class SyncFiles {
-    synchronized public void fileReader(){
-        FileInputStream fis = null;
+    synchronized public void fileReader(FileInputStream fis){
         DataInputStream dis = new DataInputStream(fis);
         System.out.println(Thread.currentThread().getName()+" is running...");
         try {
@@ -27,8 +26,7 @@ public class SyncFiles {
         System.out.println("Done "+Thread.currentThread().getName());
     }
 
-    synchronized public void fileWriter() throws IOException{
-        FileOutputStream fos = null;
+    synchronized public void fileWriter(FileOutputStream fos) throws IOException{
         DataOutputStream dos = new DataOutputStream(fos);
 
         for(int i=0; i<10; i++){
