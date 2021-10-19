@@ -25,7 +25,6 @@ public class Server {
                 switch(msg){
                     case 1:{
                         n = in.read();
-                        out.flush();
                         out.write(sum1(n));
                         out.flush();
                         break;

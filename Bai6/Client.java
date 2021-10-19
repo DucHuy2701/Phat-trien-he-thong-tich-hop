@@ -1,8 +1,6 @@
 package Bai6;
 
 import java.io.BufferedReader;
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
@@ -25,20 +23,22 @@ public class Client {
             int n = -1;
 
             while(n!=0){
-                System.out.println("1. sum 1");
-                System.out.println("2. sum 2");
-                System.out.println("3. sum 3");
-                System.out.println("0. exit1");
-                System.out.print("Choose: ");
+                System.out.println("1. Tong 1+3+5+7+...+(2n+1)");
+                System.out.println("2. Tong 1*2 + 2*3+...+n*(n+1)");
+                System.out.println("3. Bieu thuc 1-2+3-4+..+(2n+1)");
+                System.out.print("Choose(1/2/3): ");
+
                 n = sc.nextInt();
                 out.write(n);
                 out.flush();
+
                 System.out.print("Number: ");
                 int x = sc.nextInt();
                 out.write(x);
                 out.flush();
+
                 int output = in.read();
-                System.out.println("result = "+output);
+                System.out.println("result = " + output);
             }
             out.close();
             in.close();
