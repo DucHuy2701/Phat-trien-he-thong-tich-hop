@@ -25,7 +25,7 @@ public class ServerImpl extends UnicastRemoteObject implements IServer{
     @Override
     public void broadcastMsg(String msg) throws RemoteException {
         for(IClient client : clients)
-            client.retriveMsg(msg);
+            client.retrieveMsg(msg);
         System.out.println(msg);
     }
 

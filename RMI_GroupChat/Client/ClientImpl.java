@@ -24,7 +24,7 @@ public class ClientImpl extends UnicastRemoteObject implements IClient{
     }
 
     @Override
-    public void retriveMsg(String msg) throws RemoteException {
+    public void retrieveMsg(String msg) throws RemoteException {
         System.out.println(msg);
     }
     
