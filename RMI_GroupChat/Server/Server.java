@@ -1,6 +1,5 @@
 package RMI_GroupChat.Server;
 
-import java.rmi.Naming;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.util.Scanner;
@@ -21,9 +20,11 @@ public class Server {
             reg.bind(url, chatServer);
             System.out.println("[System]: server is ready! at "+url);
 
+            String onl = "[" + chatServer.getName() + "] is online!";
+            chatServer.broadcastMsg(onl);
             while(true){
                 String msg = sc.nextLine().trim();
-                msg = "[" + chatServer.getName() + "]" + msg;
+                msg = "[" + chatServer.getName() + "] " + msg;
                 chatServer.broadcastMsg(msg);
             }
         } catch (Exception e) {

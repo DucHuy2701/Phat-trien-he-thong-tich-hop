@@ -14,7 +14,7 @@ public class ClientImpl extends UnicastRemoteObject implements IClient{
         this.chatServer = chatServer;
         chatServer.registerClient(this);
 
-        String msg = "[" + this.name + "] is connected!";
+        String msg = ">> " + this.name + " is connected!";
         chatServer.broadcastMsg(msg);
     }
 
