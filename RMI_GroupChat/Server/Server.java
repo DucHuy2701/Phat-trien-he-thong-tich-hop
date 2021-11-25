@@ -22,6 +22,7 @@ public class Server {
 
             String onl = "[" + chatServer.getName() + "] is online!";
             chatServer.broadcastMsg(onl);
+            
             while(true){
                 String msg = sc.nextLine().trim();
                 msg = "[" + chatServer.getName() + "] " + msg;
