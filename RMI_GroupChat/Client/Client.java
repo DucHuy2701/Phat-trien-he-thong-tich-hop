@@ -19,7 +19,7 @@ public class Client {
 
             String onl = "[" + chatClient.getName() + "] is online!";
             chatServer.broadcastMsg(onl);
-
+            
             while(loop!=0){
                 msg = sc.nextLine().trim();
                 if(msg.equalsIgnoreCase("exit")){
